@@ -122,7 +122,7 @@ class Group {
 
   private _area: string = '';
   private _status: 'active' | 'disabled' = 'disabled';
-  private _students: Student[] = []; // Modify the array so that it has a valid toSorted method*
+  private _students: Student[] = []; // Modify the array so that it has a valid toSorted method* How???
   private _directionName: string = '';
   private _levelName: string = '';
 
@@ -156,7 +156,7 @@ class Group {
   }
 
   showPerformance(): typeof this._students {
-    const sortedStudents: typeof this._students = this._students.toSorted(
+    const sortedStudents: typeof this._students = this._students.sort(
       (a: Student, b: Student) => b.getPerformanceRating() - a.getPerformanceRating()
     );
     return sortedStudents;
